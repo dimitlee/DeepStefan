@@ -48,8 +48,8 @@ def run_heat():
     # Load model
     if os.path.exists(weights_file):
         model.load_weights(weights_file)
-
-    model.train(n_iter=40000, batch_size=128)
+    else:
+        model.train(n_iter=40000, batch_size=128)
 
     ### Save Model ###
     ####################
